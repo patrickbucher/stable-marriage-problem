@@ -7,4 +7,6 @@ alongside.
 
 ## Code
 
-- `stability.py`: example on page 6/7
+- `stability.py`: find blocking pairs (example on page 6/7)
+- `matching.py`: implementation of the Gale-Shapley algorithm (as described on
+  page 9, using the example from page 10)
