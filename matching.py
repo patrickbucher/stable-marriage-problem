@@ -1,19 +1,5 @@
 from stability import blocking_pairs
 
-prefs_m = {
-    1: [4, 1, 2, 3],
-    2: [2, 3, 1, 4],
-    3: [2, 4, 3, 1],
-    4: [3, 1, 4, 2],
-}
-
-prefs_w = {
-    1: [4, 1, 3, 2],
-    2: [1, 3, 2, 4],
-    3: [1, 2, 3, 4],
-    4: [4, 1, 3, 2],
-}
-
 
 # Gale-Shapley matching algorithm
 def match(pm, pw):
@@ -39,6 +25,22 @@ def match(pm, pw):
 
 
 if __name__ == '__main__':
+    # Example from p. 10: A stable matching is found.
+
+    prefs_m = {
+        1: [4, 1, 2, 3],
+        2: [2, 3, 1, 4],
+        3: [2, 4, 3, 1],
+        4: [3, 1, 4, 2],
+    }
+
+    prefs_w = {
+        1: [4, 1, 3, 2],
+        2: [1, 3, 2, 4],
+        3: [1, 2, 3, 4],
+        4: [4, 1, 3, 2],
+    }
+
     pairs = match(prefs_m, prefs_w)
     print('matching', pairs)
     blocking = blocking_pairs(pairs, prefs_m, prefs_w)
